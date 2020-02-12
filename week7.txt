@@ -1,0 +1,20 @@
+Pointer and Dynamic Memory Allocation
+1. Pointer และ Address
+1.1) Pointer เป็นตัวแปรใช้เก็บค่าตำแหน่ง ใน หน่วยความจำ
+     int c;
+     int *p;
+     p = &c;
+2.Pointer Operators
+2.1)  & เรียกว่า address operator เป็น unary operator ใช้หาค่าตำแหน่ง
+2.2 * เรียกว่า Dereferencing operator เป็น unary operator ใช้เข้าถึงข้อมูลซึ่งอ้างอิงโดยตำแหน่ง
+3. Function scanf ( )
+     คล้าย printf ( )
+     scanf ("%d", &input);
+4. การจองหน่วยความจำ
+     ใช้ฟังก์ชัน maloc ( ) และ free ( ) เพื่อจองและคืนพื้นที่ในหน่วยความจำ
+     int *data;
+     data = (int *)malloc(1000 * sizeof (int));
+
+     free(data);
+5.Segmentation falut (core dumped)
+     หากพยายามเข้าถึงหน่วยความจำที่ไม่ได้จองไหรือนอกจากตัวแปรที่ประกาศไว้ มีโอกาศที่ระบบปฏิบัติการจะหยุดโปรแกรม มันแสดงข้อความว่า segmentation fault (core dumped ) ออกมาให้รับรู้
