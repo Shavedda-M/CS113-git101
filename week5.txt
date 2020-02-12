@@ -1,0 +1,23 @@
+Functions and Program Structure Part 2
+1.Scope Rules
+1.1) Local Variables
+     ตัวแปรที่ ถูกประกาศไว้อยู่ภายใน block , ฟังก์ชัน ใช้งานได้เพียงภายในฟังก์ชัน ที่ถูกประกาศ
+1.2) Global Variables
+     ตัวแปรที่ประกาศภายนอกฟังก์ชัน เข้าถึงได้จากฟังก์ชันต่างๆ รวมทั้ง main
+2.Seperate Compilation
+     ส่วนสของการนิยามและการเรียกใช้ สามารถแยกอยู่คนละไฟล์ได้
+วิธีคอมไพล์
+     gcc -c main.c			//สร้าง main.o
+     gcc -c func.c			//สร้าง func.o
+     gcc main.o func.o -o main.exe
+3.การสร้าง Static Library
+     gcc -c func.c
+     ar cr libfunc.a func.o
+4. การสร้าง Shared Library
+     gcc -shared -o libfunc.dll -Wl,--out-implib,libfunc.dll.a *.o
+5. การเรียกใช้ฟังก์ชันใน Shared Library
+     from ctypes import cdll
+     c_lib = cdll.LoadLibrary("libfunc.dll")
+     c_lib.c_function(123)
+6. Random Number Generator
+     rand( )
