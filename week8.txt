@@ -1,0 +1,38 @@
+Linked List
+     เป็นโครสร้างข้อมูลที่ออกแบบมาใช้เก็บข้อมูล เชื่อโยงต้อกันเป็นสาย
+1.Structre 
+     เป็นการกำหนดรูปแบบโครงสร้างข้อมูล
+     struct student {
+          char id [12];
+          char name [40];
+          int age;
+};
+     การประกาศตัวแปรโครงสร้าง structure
+          struct student std;
+     การเข้าถึง 
+          printf ("%s\n", std.name);
+          std.age =  21;
+     การประกาศตัวแปรพร้อมค่ากำหนด
+          struct student another_std = {"6211140123", "Josh Smith", 18};
+2. ตัวแปร pointer ไปยัง Structure
+     struct student std, *p_std;
+     p_std = &std;
+     printf ("%s\n", (*p_std).name);
+     (*p_std).age = 21;
+3.การใช้ typedef
+     คือการกำหนดประเภทข้อมูลขึ้นมา 
+          typedef unsigned long int ulint;
+     สำหรับกรณี struct 
+          typedef struct student {
+               char id [12];
+               char name [40];
+               int age;
+          } Student;
+4.Self - Referential Structurs
+     เป็นโครงสร้างเพื่อจัดการ linked list โดยสร้าง struct ขึ้นมาโดยใช้ struct แลำภายในมีฟิลด์เป็น pointer
+     struct node {
+          int data;
+          struct node *next;
+      };
+5. Doubly Linked List
+     แต่ละ node เชื่อต่อกันด้วย ลิงก์ 2 ลิงก์
