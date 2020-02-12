@@ -1,0 +1,20 @@
+Functions and Program Structure
+1. Function Definition
+return - value - type           function - name  ( parameter - list )
+{
+     declarations
+     statement
+     statement
+     :
+}
+2. Function Prototypes
+     เหมือน function header ของ function definition
+3. Return Value
+     ฟังก์ชันจะมีการส่งค่ากลับ เป็น void
+     หากมีการส่งค่ากลับใช้ return เพื่อส่งค่ากลับ
+4. Recursion 
+     ฟังก์ชันเรียกใช้ตัวเองเรียกว่า recursion 
+5. Local Variable
+     ตัวแปรที่ประกาศภายใน block , ฟังก์ชัน ใช้งานได้ภายในฟังก์ชันที่ถูกประกาศไว้
+6. Global Variable
+     ตัวแปรที่ประกาศภายนอกฟังก์ชัน
