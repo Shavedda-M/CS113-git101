@@ -1,0 +1,38 @@
+Control Flow
+1.statement ต้องปิดท้ายด้วยเครื่องหมาย semicolon ( ; )
+2.ปีกกา {} ใช้รวม declaratoins กับ statement เข้าด้วยกันเป็น block
+3.If - Else
+if (expression)
+     statement
+else
+     statement
+4.Else - If
+if (expression)
+     statement
+else if (expression)
+     statement
+else
+    statement
+5.Switch
+switch  (expression){
+     case const-expr:
+          statements
+     case const-expr:
+          statements
+     default:
+          statements
+}
+5.Loop
+5.1) While
+while (expression)
+     statement
+5.2) For
+for (expr1; expr2; expr3)
+     statement
+5.3) Do - While
+do {
+     statment
+} while (expression);
+6.Break and Continue
+6.1) break ทำให้โปรแกรมหลุดจากลูป
+6.2) continue ทำให้ลูปวนซำใหม่
