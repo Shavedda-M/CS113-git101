@@ -1,0 +1,42 @@
+Git Part 2 : Branch Merge Conflict
+1.การ clone git repository ใช้ คำสั่ง 
+     git clone < git - url >
+2.การสร้าง branch ใช้ คำสั่ง 
+     git branch < branch - name >
+3.การเปลี่ยน branch ใช้คำสั่ง 
+     git checkout < branch - name >
+*ถ้าต้องการสร้าง branch แล้ว สลับไป branch นั้นเลยใช้คำสั่ง 
+     git checkout -b < branch - name >
+*การตรวจสอบว่ามี branch อะไรบ้าง ใช้ คำสั่ง 
+     git branch  ["*" บอกว่าตอนนี่กำลังอยู่ branch ไหน]
+4. การ merge branch แบบไม่มี conflict
+     1.เพิ่มไฟล์ใน branch 1 และ  branch 2 จากนั้น add และ commit
+     2. push 1 ขึ้น github
+     3. push 2 ขึ้น github
+     4. mergeให้งานใน 2 ไปรวมกับ 1
+     ** จะ merge ไปที่ใดต้องเปลี่ยน ไปที่ branch นั้้น
+5. การ pull แบบ ไม่มี conflict
+     1. clone git repository มาไว้ directory ใหม่ 
+     2. เพิ่มไฟล์ใน driectory ใหม่ จากนั้น add และ commit
+     3. push ไปที่ github
+     4. กลับมาที่ directory เก่า แล้ว pull โดยใช้คำสั่ง 
+               git pull origin master  [ดึงมาจาก branch master]
+6. การ merge แบบมี conflict
+     1. สร้าง branch ใหม่
+     2. แก้ไขไฟล์เดียวกัน ใน branch ใหม่ และ branch เก่าให้แตกต่างกัน จากนั้น add และ commit
+     3.  merge branch ใหม่เข้าไปใน branch เก่า
+     **ไม่ต้อง push ก็สามารถ merge ได้
+     4. หาก merge ไม่สำเร็จจะมีข้อความว่าเกิด conflict ขึ้น
+     5. เปิดไฟล์ใน branch เก่าจะเห็นว่า git มีข้อความอธิบาย conflict
+     6. แก้ไข conflict
+     7. ให้ commit การ merge
+     8. push ขึ้น github
+7. การ pull แบบมี conflict
+     1. ใน directory ใหม่ แก้ไขข้อมูลไฟล์แล้ว push ไปที่ github
+     2. ใน directory เก่า ให้แก้ไขข้อมูลในไฟล์เดียวกัน แล้ว commit
+     3. ก่อน push ให้ pull origin master
+     **จะพบว่า มี conflict เกิดขึ้น
+     4.แก้ไข conflict จากนั้น commit แล้ว push ไปที่ github
+     5.ใน directory ใหม่ จะเห็นว่ามี checkpoint ตามหลัง origin master อยู่
+     6. pull ลงมา
+     ** ไม่เกิด conflict เพราะไม่มีการแก้ไข
